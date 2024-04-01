@@ -1,0 +1,54 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+   {% block title %} <title>Bourdon94m - Main Page</title> {% endblock %}
+</head>
+<body>
+    {% block description %} <h1>Documentations</h1> {% endblock %}
+    {% block description_second %} <p> Bienvenue sur la documentations de mes projets passée en revue, du contenue sera ajoutée au fur et a mesur que les projets avance</p> {% endblock %}
+
+    {% block content %}
+        <section id="postsSection">
+    <main id="leftCol" class=" ">
+        {% for post in posts %}
+        <article>
+            <header>
+                <ul class="tagsChip">
+                        {% for cat in post.category.all %}
+                        <li>{{ cat.name }}</li>
+                        {% endfor %}
+                </ul>
+
+                <h1>
+                    <a href="{% url 'detail' post.slug %}">{{ post.title }}</a>
+                </h1>
+                <p> Publiée le {{ post.date|date:"j M Y" }}</p>
+            </header>
+            <p style="color: black">{{ post.description|truncatewords:30 }}</p>
+        </article>
+        {% endfor %}
+    </main>
+    <aside id="rightCol">
+        <section id="postsSearch">
+            <h1>Rechercher</h1>
+            <form method="GET" action="/posts/search_posts/">
+                <input type="search" name="search" placeholder="Rechercher..." required />
+                <button>Rechercher</button>
+            </form>
+        </section>
+        <section id="categories">
+            <h1>Catégories</h1>
+            <ul>
+                {% for cat in categorys %}
+                    <li>
+                    <a href="">{{ cat.name }}<span>(1)</span></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </aside>
+</section>
+    {% endblock %}
+</body>

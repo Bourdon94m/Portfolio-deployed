@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg176"
+   width="69.199638"
+   height="82.732361"
+   viewBox="0 0 69.199642 82.732362"
+   sodipodi:docname="arrow.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs180" />
+  <sodipodi:namedview
+     id="namedview178"
+     pagecolor="#0000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showborder="true"
+     inkscape:zoom="8"
+     inkscape:cx="42.4375"
+     inkscape:cy="44.5625"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="1920"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g182" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g182"
+     transform="translate(-22.102441,-25.258596)">
+    <path
+       id="rect396"
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fafafa;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="m 62.153823,87.865502 -28.551382,10e-7 c -5.539994,0 -10,-4.460006 -10,-10 V 36.758596 c 0,-5.539994 4.460006,-10 10,-10 v 0 h 28.551382" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#2ec4b6;fill-opacity:1;stroke:none;stroke-width:4;stroke-dasharray:none;stroke-opacity:1"
+       x="60.020859"
+       y="99.022217"
+       id="text1764"><tspan
+         sodipodi:role="line"
+         id="tspan1762"
+         x="60.020859"
+         y="99.022217">❯ </tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,101 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="{% static 'img/echo42-logo.svg' %}"/>
+    <meta
+            name="description"
+            content="Découvrez le site Bourdon94m.fr - Procédures, astuces, ressources sur Linux, Raspberry Pi, Python, Django etc."
+    />
+    {% block title %}<title>Documentations - Bourdon94m.fr</title> {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/intellij-light.min.css' %}"/>
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/highlight.min.js' %}"></script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            document.querySelectorAll("pre code").forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+<header id="mainHeader">
+    <div>
+        <a id="homeLink" href="/" title="Home">
+            <img src="/static/img/echo42-logo.svg" alt="logo"/>
+            <h1>Bourdon94m</h1>
+        </a>
+        <nav id="mainNav">
+            <h1 class="accessibility">Menu principale</h1>
+            <p class="accessibility">
+                <a
+                        href=""
+                        title="Accéder directement au contenu principal de cette page"
+                >Passer le menu</a
+                >
+            </p>
+            <ul>
+                <li>
+                    <a class="active" href="{% url 'index' %}">Documentations</a>
+                </li>
+                <li>
+                    <a class="" href="{% url 'ressources' %}">Ressources</a>
+                </li>
+                <li>
+                    <a class="" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li>
+                    <a class="" href="">À propos</a>
+                </li>
+            </ul>
+        </nav>
+        <button id="menuToggle">
+            <img src="/static/img/menu.svg" alt="Ouvrir / Fermer le menu"/>
+        </button>
+    </div>
+</header>
+<main id="pageContent">
+    <section id="titleSection">
+        <div>
+            <img src="/static/img/arrow.svg" alt="arrow-picto"/>
+            {% block description %} <h1>Documentations</h1> {% endblock %}
+            {% block description_second %}
+                <p>
+                    Découvrez ici une collection d'articles pratiques issus de mon
+                    parcours d'apprentissage de Linux, Python, du développement web et
+                    bien plus encore. Ces ressources sont conçues pour partager ce que
+                    j'ai appris, dans l'espoir qu'elles puissent vous être utiles dans
+                    votre propre cheminement.
+                </p>
+            {% endblock %}
+        </div>
+    </section>
+
+
+    {% block content %}{% endblock %}
+
+    <footer id="mainFooter">
+        <small id="cc" xmlns:cc="http://creativecommons.org/ns#"
+        >2024 Bourdon94m.fr - Licence
+            <a
+                    href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
+                    target="_blank"
+                    rel="license noopener noreferrer"
+                    style="display: inline-block"
+            >CC BY-NC 4.0</a
+            ></small
+        >
+    </footer>
+
+    <button id="btnTop">
+        <img src="{% static 'img/top.svg' %}"/>
+    </button>
+</main>
+</body>
+</html>

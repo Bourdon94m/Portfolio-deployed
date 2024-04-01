@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+<head>
+    {% block title %}<title>{{ product.title }}</title>{% endblock %}
+</head>
+
+<body>
+    {% block description %}<h1>{{ product.title }}</h1>{% endblock %}
+    {% block description_second %}<p>{{ product.description }}</p>{% endblock %}
+
+    {% block content %}
+    <section id="postsSection">
+        <main id="leftCol" class="postDetail">
+            {{ product.body|safe }}
+        </main>
+
+        <aside id="rightCol">
+                <section id="postsSearch">
+                    <h1>Rechercher</h1>
+                    <form method="GET" action="/posts/search_posts/">
+                        <input type="search" name="search" placeholder="Rechercher..." required />
+                        <button>Rechercher</button>
+                    </form>
+                </section>
+                <section id="categories">
+                    <h1>Catégories</h1>
+                    <ul>
+                    {% for cat in categories %}
+                        <li>
+                            <a href="">{{ cat.name }}<span>(1)</span></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+        </aside>
+    </section>
+    {% endblock %}
+</body>

@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+<head>
+    {% block title %}<title></title> {% endblock %}
+</head>
+
+<body>
+    {% block description %} <h1>Ressources</h1> {% endblock %}
+    {% block description_second %}
+            <p>
+            Bienvenue dans 'Ressources', une selection où je partage les coins
+            d'internet qui ont joué un rôle essentiel dans mon apprentissage.
+            Découvrez à travers ces 'cards' les personnes et plateformes qui
+            m'ont permis de façonner mes compétences et de nourrir ma passion.
+          </p>
+    {% endblock %}
+
+    {% block content %}
+    <main id="mainContent">
+        <ul class="rCard">
+          <li>
+            <img src="{% static 'img/docstring.jpg' %}" alt="Docstring.fr" />
+            <h1>Codemy.com</h1>
+            <p style="color: black">
+              Fondée par Thibault Houdon, Docstring est une plateforme complète
+              dédiée à la formation sur le langage Python ainsi qu'au
+              développement d'applications web et desktop. En plus des
+              formations, vous y trouverez un ensemble d'exercices, de
+              questionnaires et de projets à réaliser, le tout présenté avec une
+              qualité optimale.
+            </p>
+            <a href="https://www.docstring.fr" target="_blank"
+              >En savoir plus</a
+            >
+          </li>
+
+          <li>
+            <img src="{% static 'img/codemy.png' %}" alt="PlacePython.fr" />
+            <h1>Codemy.com</h1>
+            <p style="color: black">
+              Codemy.com est un site web dirigé par le développeur et formateur John Elder. Sur ce site, il propose une gamme de formations en ligne dans divers domaines de la programmation, notamment Python,
+                JavaScript, HTML/CSS, etc. Les formations sont conçues pour les débutants ainsi que pour les programmeurs plus expérimentés, et elles sont souvent accompagnées de ressources supplémentaires telles que des exercices pratiques,
+                des projets à réaliser et un support communautaire. Le site offre une plateforme interactive et conviviale pour apprendre la programmation à son propre rythme, avec un accès à vie aux cours achetés.
+            </p>
+            <a href="https://codemy.com/" target="_blank">En savoir plus</a>
+          </li>
+        </ul>
+      </main>
+    {% endblock %}
+</body>
