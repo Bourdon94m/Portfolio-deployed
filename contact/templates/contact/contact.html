@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+
+{% block title %} <title>Contact Me</title> {% endblock %}
+
+{% block description %} <h1>Vous souhaitez me contacter ?</h1> {% endblock %}
+{% block description_second %} <p>Je suis à votre disposition pour répondre à vos interrogations concernant les articles du blog, discuter de projets, prendre note de tout dysfonctionnement que vous auriez constaté sur le site, ou encore pour toute autre question. N'hésitez pas à me contacter. Votre feedback et vos questions sont les bienvenus !</p> {% endblock %}
+
+{% block content %}
+    <body>
+        <main id="mainContent">
+            <form action="{% url 'contact' %}" method="POST" style="width: 700px" class="container">
+                {% csrf_token %}
+                {% for msg in messages %}
+                <div class="alert alert-primary">
+                    {{ msg }}
+                </div>
+                {% endfor %}
+
+                {{ form.as_p }}
+                <button class=" container btn btn-secondary" type="submit">Envoyer</button>
+            </form>
+        </main>
+    </body>
+{% endblock %}

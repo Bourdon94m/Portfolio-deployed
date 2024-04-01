@@ -1,5 +1,5 @@
 """
-URL configuration for portfolio project.
+URL configuration for Website project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from contact.views import contact
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('Blog.urls')),
+    path('contact/', contact, name='contact'),
 
 ]

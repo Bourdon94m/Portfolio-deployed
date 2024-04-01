@@ -9,4 +9,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('detail/<str:slug>/', detail, name='detail'),
     path('ressources/', ressources_page, name='ressources'),
+    path('contact/', include('contact.urls')),
 ]
